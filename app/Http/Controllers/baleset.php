@@ -9,6 +9,6 @@ class baleset extends Controller
 {
     //
     public function baleset(){
-        return view('baleset');
+        return view('balesetek');
     }
 }
