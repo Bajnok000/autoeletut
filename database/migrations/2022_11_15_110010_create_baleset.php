@@ -27,6 +27,6 @@ class CreateBaleset extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('baleset');
+        Schema::dropIfExists('balesetek');
     }
 }

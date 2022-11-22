@@ -28,6 +28,6 @@ class CreateTulajdonos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tulajdonos');
+        Schema::dropIfExists('tulajdonosok');
     }
 }

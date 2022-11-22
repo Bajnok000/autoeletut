@@ -29,6 +29,6 @@ class CreateAutok extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('autok');
+        Schema::dropIfExists('auto');
     }
 }

@@ -14,13 +14,14 @@
             <div class="col-12">
                 <form method="post">
                     @csrf
+                    <h1>Auto adatainak felvétele</h1><br>
                     <label for="rendszam">Rendszám:</label>
                     <input type="text" name="rendszam" id="rendszam"><br>
                     <label for="tipus">Típus</label>
                     <input type="text" name="tipus" id="tipus"><br>
                     <label for="szin">Szín</label>
                     <input type="text" name="szin" id="szin"><br>
-                    <button type="submit" class="bg-warning">Beküldés</button>
+                    <button type="submit" class="bg-primary">Beküldés</button>
                 </form>
             </div>
         </div>
