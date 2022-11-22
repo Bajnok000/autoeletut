@@ -12,7 +12,8 @@
 <div class="container">
         <div class="row">
             <div class="col-12">
-                <form method="post">
+                <form method="POST">
+                    @csrf
                     <label for="nev">Tulajdonos neve: </label>
                     <input type="text" name="nev" id="nev"><br>
                     <label for="tulajdonkez">Tulajdonjog kezdete: </label>

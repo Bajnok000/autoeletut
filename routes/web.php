@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('./auto', function () {
     return view('auto');
 });
-Route::get('./tulajdonosok', function () {
+Route::get('/tulajdonos', function () {
     return view('tulajdonosok');
 });
 Route::get('./balesetek', function () {

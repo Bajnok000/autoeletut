@@ -12,7 +12,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form method="POST">
+                <form method="post">
+                    @csrf
                     <label for="rendszam">Rendszám:</label>
                     <input type="text" name="rendszam" id="rendszam"><br>
                     <label for="tipus">Típus</label>
