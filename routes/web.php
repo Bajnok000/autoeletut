@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Http\App\Controllers\auto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +19,13 @@ Route::get('/', function () {
 Route::get('/auto', function () {
     return view('auto');
 });
+Route::post('/auto',[auto::class,"autoRogzites"]);
+
 Route::get('/tulajdonosok', function () {
     return view('tulajdonosok');
 });
+Route::post('/tulajdonosok',[tulajdonos::class,"tulajRogzites"]);
+
 Route::get('/balesetek', function () {
     return view('balesetek');
 });
