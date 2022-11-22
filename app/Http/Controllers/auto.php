@@ -24,10 +24,18 @@ class auto extends Controller
                 "rendszam.min" => "Kevesbb mint 6 karaktert adott meg",
                 "rendszam.max" => "Maximum 10 karaktert irhat be",
 
-                "tipus" => "Töltsd ki a mezőt",
+                "tipus.required" => "Töltsd ki a mezőt",
                 
-                "szin" => "Töltsd ki a mezőt",
+                "szin.required" => "Töltsd ki a mezőt",
             ]
         );
+
+        DB::insert("INSERT INTO autok (rendszam, tipus, szin) VALUES (?,?,?)",[
+        $req->get('rendszam'),
+        $req->get('tipus'),
+        $req->get('szin')]);
+
+        return redirect("/auto");
+        
     }
 }

@@ -15,18 +15,22 @@ class tulajdonos extends Controller
     public function tulajRogzites(Request $req){
         $req -> validate(
             [
-                "nev" => "requiered|min:5|max:20",
+                "nev" => "required|min:5|max:20",
                 "tulajdonkez" => "required",
-                "tulajdonveg" => "required",
+                "tulajdoonveg" => "required",
             ],
             [
-                "nev.requiered" => "Töltse ki a mezőt",
+                "nev.required" => "Töltse ki a mezőt",
                 "nev.min" => "Minimum 5 karaktert adjon meg",
                 "nev.max" => "Maximum 20 karaktert adjon meg",
-                "tulajdonkez" => "Töltse ki a mezőt",
-                "tulajdonveg" => "Töltse ki a mezőt",
+                "tulajdonkez.required" => "Töltse ki a mezőt",
+                "tulajdoonveg.required" => "Töltse ki a mezőt",
             ]
-        )
+            );
     }
+    DB::insert("INSERT INTO tulajdonos (tulajdonos, tulajdonkezd, tulajdonvege) VALUES (?,?,?)",[$req->('tulajdonos'),
+        $req->('tulajdonoskezd'),
+        $req->('tulajdonosvege]')]);
 
+        return redirect("/tulajdonos");
 }

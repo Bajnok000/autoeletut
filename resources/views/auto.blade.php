@@ -17,10 +17,25 @@
                     <h1>Auto adatainak felvétele</h1><br>
                     <label for="rendszam">Rendszám:</label>
                     <input type="text" name="rendszam" id="rendszam"><br>
+                    @error('rendszam')
+                    <div class="alert alert-danger">
+                        {{ $message }}<br>
+                    </div>
+                    @enderror
                     <label for="tipus">Típus</label>
                     <input type="text" name="tipus" id="tipus"><br>
+                    @error('tipus')
+                    <div class="alert alert-danger">
+                        {{ $message }}<br>
+                    </div>
+                    @enderror
                     <label for="szin">Szín</label>
                     <input type="text" name="szin" id="szin"><br>
+                    @error('szin')
+                    <div class="alert alert-danger">
+                        {{ $message }}<br>
+                    </div>
+                    @enderror
                     <button type="submit" class="bg-primary">Beküldés</button>
                 </form>
             </div>

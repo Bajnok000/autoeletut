@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Http\App\Controllers\auto;
+use App\Http\Controllers\auto;
+use App\Http\Controllers\tulajdonos;
+use App\Http\Controllers\baleset;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,4 @@ Route::post('/tulajdonosok',[tulajdonos::class,"tulajRogzites"]);
 Route::get('/balesetek', function () {
     return view('balesetek');
 });
+Route::post('/balesetek',[baleset::class,"balesetRogzites"]);
